@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;

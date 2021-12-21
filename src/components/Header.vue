@@ -7,16 +7,17 @@
 
             <nav>
                <ul class="menu-list">
-                   <li>characters</li>
-                   <li>comics</li>
-                   <li>movies</li>
-                   <li>tv</li>
-                   <li>games</li>
-                   <li>collectibles</li>
-                   <li>videos</li>
-                   <li>fans</li>
-                   <li>news</li>
-                   <li>shop</li>
+                   <li><a href="#">characters</a></li>
+                   <li><a class="current" href="#">comics</a></li>
+                   <li><a href="#">movies</a></li>
+                   <li><a href="#">tv</a></li>
+                   <li><a href="#">games</a></li>
+                   <li><a href="#">collectibles</a></li>
+                   <li><a href="#">videos</a></li>
+                   <li><a href="#">fans</a></li>
+                   <li><a href="#">news</a></li>
+                   <li><a href="#">shop</a></li>
+                   
                </ul>
             </nav>
 
@@ -28,11 +29,17 @@
 
 <script>
 export default {
-    name: "Header"
+    name: "Header",
+    data: function() {
+        
+        
+    }
 }
 </script>
 
 <style scoped lang="scss">
+@import '../style/variables';
+
 
 header {
     width: 100%;
@@ -62,13 +69,21 @@ nav {
 
         li {
             text-transform: uppercase;
-            list-style-type: none;
             flex-direction: column;
             margin: 10px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
-            color: rgb(75, 75, 75); 
-            cursor: pointer;
+        }
+        
+        a {
+            display: inline-block;
+            color: rgb(75, 75, 75);  
+            line-height: 86px;
+
+            &.current {
+                color: $brand_primary_color;
+                border-bottom: 4px solid $brand_primary_color;
+            }
         }
     }
 }

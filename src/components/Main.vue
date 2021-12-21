@@ -71,12 +71,10 @@ nav {
 
         li {
             text-transform: uppercase;
-            list-style-type: none;
             flex-direction: column;
             // margin: 30px;
             font-size: 15px;
             color: white; 
-            cursor: pointer;
         }
     }
 }
