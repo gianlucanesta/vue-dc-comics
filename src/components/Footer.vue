@@ -15,7 +15,6 @@
 
             <nav>
                 
-
                <ul class="menu-list">
                    <li class="follow">FOLLOW UP</li>
                    <li><img src="../assets/img/footer-facebook.png" alt="Logo DC"></li>
@@ -39,8 +38,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-
+@import '../style/variables';
+@import '../style/common';
 
 .content {
     display:flex;

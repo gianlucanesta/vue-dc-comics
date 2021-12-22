@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <div class="container">
+    <section class="container">
+        <div>
 
         </div>
     </section>
@@ -13,5 +13,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../style/variables';
+@import '../style/common';
 
 </style>

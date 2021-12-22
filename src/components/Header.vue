@@ -1,27 +1,17 @@
 <template>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="../assets/img/dc-logo.png" alt="Logo DC">
-            </div>
-
-            <nav>
-               <ul class="menu-list">
-                   <li><a href="#">characters</a></li>
-                   <li><a class="current" href="#">comics</a></li>
-                   <li><a href="#">movies</a></li>
-                   <li><a href="#">tv</a></li>
-                   <li><a href="#">games</a></li>
-                   <li><a href="#">collectibles</a></li>
-                   <li><a href="#">videos</a></li>
-                   <li><a href="#">fans</a></li>
-                   <li><a href="#">news</a></li>
-                   <li><a href="#">shop</a></li>
-                   
-               </ul>
-            </nav>
-
+    <header class="container">
+        
+        <div class="logo">
+            <img src="../assets/img/dc-logo.png" alt="Logo DC">
         </div>
+
+        <nav>
+            <ul class="menu-list">
+                <li v-for="(link, index) in links" :key='index'>
+                    <a :class="{current: link.current}" href="link.url">{{link.text}}</a>
+                </li>                   
+            </ul>
+        </nav>
         
     </header>
 </template>
@@ -30,16 +20,13 @@
 <script>
 export default {
     name: "Header",
-    data: function() {
-        
-        
-    }
+    props: ['links']
 }
 </script>
 
 <style scoped lang="scss">
 @import '../style/variables';
-
+@import '../style/common';
 
 header {
     width: 100%;
@@ -70,7 +57,7 @@ nav {
         li {
             text-transform: uppercase;
             flex-direction: column;
-            margin: 10px;
+            margin: 0 10px ;
             font-size: 16px;
             font-weight: bold;
         }
@@ -78,16 +65,14 @@ nav {
         a {
             display: inline-block;
             color: rgb(75, 75, 75);  
-            line-height: 86px;
+            line-height: 96px;
 
             &.current {
-                color: $brand_primary_color;
-                border-bottom: 4px solid $brand_primary_color;
+                color: #0282f9;
+                border-bottom: 4px solid #0282f9;
             }
         }
     }
 }
-
-
 
 </style>
