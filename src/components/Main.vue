@@ -30,19 +30,7 @@
             </div> 
     </div>
 
-    <div class="menu-bar"> 
-        <div class="container">
-            <nav>
-               <ul class="menu-list">
-                   <li>digital comics</li>
-                   <li>dc merchandise</li>
-                   <li>subscription</li>
-                   <li>comic shop locator</li>
-                   <li>dc power visa</li>
-               </ul>
-            </nav>
-        </div>
-    </div>
+    <Icons />
 
 
         
@@ -51,11 +39,13 @@
 
 <script>
 import Serie from "./Serie.vue";
+import Icons from "./Icons.vue";
 
 export default {
     name: "Main",
     components: {
-        Serie
+        Serie,
+        Icons
         
     },
     data: function() {
@@ -149,10 +139,8 @@ export default {
 
 .content {
     overflow: hidden;
-    // width: 100%;
     height: 400px;
     
-    // background-image: url("../assets/img/jumbotron.jpg");
     img {
         width: 100%;
         height: 100%;
@@ -169,13 +157,6 @@ export default {
     justify-content: center;
     position: relative;
     
-}
-
-.menu-bar {
-    display: flex;
-    width: 100%;
-    height: 150px;
-    background-color: $brand_primary_color;
 }
 
 .container {  
