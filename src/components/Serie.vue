@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="single-serie">
-            <img :src="serieObject.thumb" :alt="serieObject.type">
+            <div class="square-img"><img :src="serieObject.thumb" :alt="serieObject.type"></div>
             <h4>{{ serieObject.series }}</h4>
 
             
@@ -29,8 +29,19 @@ section {
 .single-serie {
     margin: 20px 3px;
 } 
+
+.square-img {
+    height: 200px;
+    overflow: hidden;
+}
+
 h4 {
+    margin-top: 7px;
+    font-size: 16px;
+    text-transform: uppercase;
     text-align: center;
 }
+
+
 
 </style>

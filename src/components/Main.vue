@@ -2,30 +2,32 @@
     <main>
         
     <div class="content">
-        <!-- <div class="container">
-            
-
-        </div>  -->
+        <img src="../assets/img/jumbotron.jpg" alt="">
+        
     </div>
 
     <div class="current-series">
-       <div class="container">
-             <Serie v-for="(Serie, index) in series" :key="index" :serieObject="Serie"/>
-            <!-- <Serie />
-            <Serie />
-            <Serie />
-            <Serie />
-            <Serie />
-            <Serie />
 
-            <Serie />
-            <Serie />
-            <Serie />
-            <Serie />
-            <Serie />
-            <Serie /> -->
-        </div> 
-        
+        <div class="series-button">CURRENT SERIES</div>
+
+            <div class="container">
+                <Serie v-for="(Serie, index) in series" :key="index" :serieObject="Serie"/>
+            
+                <!-- <Serie />
+                <Serie />
+                <Serie />
+                <Serie />
+                <Serie />
+                <Serie />
+
+                <Serie />
+                <Serie />
+                <Serie />
+                <Serie />
+                <Serie />
+                <Serie /> -->
+                <div class="load-more">LOAD MORE</div>
+            </div> 
     </div>
 
     <div class="menu-bar"> 
@@ -146,17 +148,26 @@ export default {
 
 
 .content {
-    display:flex;
-    width: 100%;
+    overflow: hidden;
+    // width: 100%;
     height: 400px;
-    background-image: url("../assets/img/jumbotron.jpg");
-     
+    
+    // background-image: url("../assets/img/jumbotron.jpg");
+    img {
+        width: 100%;
+        height: 100%;
+        object-position: top;
+        object-fit: cover;
+    } 
 }
 
 .current-series{    
     padding: 60px 0;
     background-color: #1c1c1c;  
     flex-direction: column;
+    display: flex;
+    justify-content: center;
+    position: relative;
     
 }
 
@@ -170,16 +181,34 @@ export default {
 .container {  
     display: flex;
     flex-wrap: wrap;
-    justify-items: center;
     font-size: 22px;
+    justify-content: center;
+    
+}
+
+.series-button {
+    padding: 8px 26px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: $brand_primary_color;
+    position: absolute;
+    top: -22.5px;
+    left: 275px;
+    cursor: pointer;
+}
+.load-more {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 8px 64px;
+    background-color: $brand_primary_color;
+    cursor: pointer;
 }
 
 nav {
-    
     display: flex;
     justify-content: center;
     width: 100%;
-
 
     ul {
         display: flex;
@@ -195,8 +224,5 @@ nav {
         }
     }
 }
-
-
-
 
 </style>

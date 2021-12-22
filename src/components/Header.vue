@@ -68,8 +68,8 @@ nav {
             line-height: 96px;
 
             &.current {
-                color: #0282f9;
-                border-bottom: 4px solid #0282f9;
+                color: $brand_primary_color;
+                border-bottom: 4px solid $brand_primary_color;
             }
         }
     }
